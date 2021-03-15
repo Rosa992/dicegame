@@ -1,0 +1,73 @@
+body {
+  background-color: #af2d2d;
+  margin: auto;
+}
+
+/*Headings*/
+h1 {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 70px;
+  -webkit-text-fill-color: #FFFF;
+  -webkit-text-stroke-color: #214252;
+  -webkit-text-stroke-width: 4px;
+  margin: auto;
+  padding-top: 45px;
+}
+
+/*containers*/
+.first {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 400px;
+  grid-column-gap: 60px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.item1, .item2 {
+  text-align: center;
+  font-size: 50px;
+}
+
+
+
+/*Dice Images*/
+
+p {
+  text-align: center;
+  margin: 30px 0px 10px 0px;
+  padding: 10px 10px;
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-text-fill-color: #214252;
+  -webkit-text-stroke-color: #FFFF;
+  -webkit-text-stroke-width: 1px;
+}
+
+.img1, .img2 {
+  margin-top: 10px;
+
+}
+
+
+/*buttons*/
+.second {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 75px;
+  grid-column-gap: 60px;
+  justify-content: center;
+}
+
+.btn1, .btn2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+
+/*footer section*/
+.foot {
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+  font-size: 13px;
+}
