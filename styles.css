@@ -1,73 +1,101 @@
 body {
   background-color: #af2d2d;
-  margin: auto;
+margin: auto;
 }
 
-/*Headings*/
-h1 {
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 3fr 3fr;
+  grid-template-rows: 1fr 2fr 0.5fr 0.5fr;
+  grid-template-areas:
+  "main main"
+  "content1 content3"
+  "content2 content4"
+  "footer footer";
   text-align: center;
+  align-items: center;
+  justify-items: center;
+  margin: 10px 80px;
+}
+
+main {
+  grid-area: main;
+  padding: 15px 0px 10px;
   font-family: 'Ubuntu', sans-serif;
   font-size: 70px;
   -webkit-text-fill-color: #FFFF;
   -webkit-text-stroke-color: #214252;
   -webkit-text-stroke-width: 4px;
-  margin: auto;
-  padding-top: 45px;
 }
 
-/*containers*/
-.first {
-  display: grid;
-  grid-template-columns: 300px 300px;
-  grid-template-rows: 400px;
-  grid-column-gap: 60px;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.item1, .item2 {
-  text-align: center;
-  font-size: 50px;
-}
-
-
-
-/*Dice Images*/
-
-p {
-  text-align: center;
-  margin: 30px 0px 10px 0px;
-  padding: 10px 10px;
+#content1 {
+  font-size: 40px;
   font-family: 'Ubuntu', sans-serif;
   -webkit-text-fill-color: #214252;
   -webkit-text-stroke-color: #FFFF;
   -webkit-text-stroke-width: 1px;
+  grid-area: content1;
 }
 
-.img1, .img2 {
-  margin-top: 10px;
-
+#content2 {
+  grid-area: content2;
 }
 
 
-/*buttons*/
-.second {
-  display: grid;
-  grid-template-columns: 300px 300px;
-  grid-template-rows: 75px;
-  grid-column-gap: 60px;
-  justify-content: center;
-}
-
-.btn1, .btn2 {
-  text-align: center;
+#content3 {
   font-size: 40px;
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-text-fill-color: #214252;
+  -webkit-text-stroke-color: #FFFF;
+  -webkit-text-stroke-width: 1px;
+  grid-area: content3;
+}
+
+#content4 {
+  grid-area: content4;
 }
 
 
-/*footer section*/
-.foot {
-  text-align: center;
-  margin: 20px 0px 20px 0px;
+
+footer {
+  grid-area: footer;
+  margin-top: 40px;
   font-size: 13px;
 }
+
+@media only screen and (max-width:750px) {
+ .container {
+   grid-template-columns: 1fr;
+   grid-template-rows: 0.8fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-areas:
+   "main"
+   "content1"
+   "content2"
+   "content3"
+   "content4"
+   "footer";
+
+ }
+
+ main {
+   font-size: 50px;
+   -webkit-text-stroke-width: 3px;
+ }
+
+ #content1, #content3 {
+   font-size: 25px;
+   -webkit-text-stroke-width: 0.5px;
+ }
+
+#content2, #content4 {
+  margin-top: 10px;
+}
+
+ footer {
+   padding: 20px 70px;
+   margin-top: 30px;
+ }
+
+}
+
